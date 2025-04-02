@@ -5,16 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRIVS TAXI - Luxe & Prestige</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #0a0a0a; color: #fff; }
-        header { background: linear-gradient(135deg, #4b0082, #8a2be2); padding: 50px; text-align: center; font-size: 36px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #fff; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
-        nav { background: rgba(28, 28, 28, 0.9); padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
-        nav a { color: #c39bd3; margin: 0 30px; text-decoration: none; font-size: 22px; font-weight: 500; transition: color 0.3s, transform 0.2s; }
-        nav a:hover { color: #ffffff; transform: scale(1.1); }
-        section { padding: 80px; text-align: center; max-width: 1000px; margin: auto; }
-        footer { background: #1c1c1c; color: #c39bd3; text-align: center; padding: 25px; font-size: 18px; box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); }
-        .button { background: linear-gradient(135deg, #4b0082, #8a2be2); padding: 18px 40px; border: none; cursor: pointer; font-size: 22px; color: #fff; border-radius: 50px; transition: background 0.3s, transform 0.3s; font-weight: 600; }
-        .button:hover { background: linear-gradient(135deg, #5a009d, #9c36b5); transform: scale(1.1); }
-        .car-image { width: 80%; max-width: 700px; margin-top: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(135deg, #0a0a0a, #1b0033); 
+            color: #fff; 
+        }
+        header {
+            background: linear-gradient(135deg, #4b0082, #8a2be2);
+            padding: 50px; 
+            text-align: center; 
+            font-size: 36px; 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            color: #fff; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background: rgba(28, 28, 28, 0.9); 
+            padding: 20px; 
+            text-align: center; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        nav a {
+            color: #c39bd3; 
+            margin: 0 30px; 
+            text-decoration: none; 
+            font-size: 22px; 
+            font-weight: 500; 
+            transition: color 0.3s, transform 0.2s;
+        }
+        nav a:hover {
+            color: #ffffff; 
+            transform: scale(1.1); 
+        }
+        section {
+            padding: 80px; 
+            text-align: center; 
+            max-width: 1000px; 
+            margin: auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
+        footer {
+            background: #1c1c1c; 
+            color: #c39bd3; 
+            text-align: center; 
+            padding: 25px; 
+            font-size: 18px; 
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .button {
+            background: linear-gradient(135deg, #4b0082, #8a2be2); 
+            padding: 18px 40px; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 22px; 
+            color: #fff; 
+            border-radius: 50px; 
+            transition: background 0.3s, transform 0.3s; 
+            font-weight: 600; 
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
+        }
+        .button:hover {
+            background: linear-gradient(135deg, #5a009d, #9c36b5); 
+            transform: scale(1.1); 
+        }
+        .car-container {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin-top: 30px;
+        }
+        .car-image {
+            width: 80%; 
+            max-width: 700px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -28,8 +100,9 @@
     
     <section id="accueil">
         <h2>Bienvenue chez PRIVS TAXI</h2>
-        <p>Votre chauffeur privé haut de gamme au Luxembourg, pour une expérience de transport exclusive et raffinée.</p>
-        <img src="sandbox:/mnt/data/A_webpage_screenshot_for_PRIVS_TAXI_Luxembourg_fea.png" alt="KIA EV9 noire GT-Line avec panneau de taxi" class="car-image">
+        <div class="car-container">
+            <img src="kia_ev9_gtline.png" alt="KIA EV9 noire GT-Line avec panneau de taxi" class="car-image">
+        </div>
     </section>
     
     <section id="services">
@@ -45,7 +118,7 @@
     <section id="contact">
         <h2>Contactez-nous</h2>
         <p>Email : contact@privstaxi.lu</p>
-        <p>Téléphone : +352 661 300 905</p>
+        <p>Téléphone : +352 123 456 789</p>
     </section>
     
     <footer>
