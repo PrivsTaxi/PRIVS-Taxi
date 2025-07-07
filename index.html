@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRIVS TAXI - Luxe & Prestige</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body { 
@@ -87,6 +88,9 @@
             border-radius: 15px; 
             box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
         }
+        #map { height: 400px; margin-top: 20px; }
+        .form-group { margin-bottom: 10px; }
+        #info { margin-top: 15px; font-size: 20px; }
     </style>
 </head>
 <body>
@@ -110,9 +114,19 @@
         <p>Transferts aéroport premium, mise à disposition avec chauffeur privé, trajets sur mesure dans des véhicules d'exception...</p>
     </section>
     
-    <section id="reservation">
+<section id="reservation">
         <h2>Réservez votre course d'exception</h2>
-        <button class="button">Réserver maintenant</button>
+        <form id="route-form">
+            <div class="form-group">
+                <input type="text" id="pickup" placeholder="Adresse de prise en charge" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="destination" placeholder="Adresse de destination" required>
+            </div>
+            <button type="submit" class="button">Calculer la course</button>
+        </form>
+        <div id="info">Distance : <span id="distance">-</span> | Prix estimé : <span id="price">-</span></div>
+        <div id="map"></div>
     </section>
     
     <section id="contact">
@@ -124,5 +138,7 @@
     <footer>
         &copy; 2025 PRIVS TAXI - Tous droits réservés | Luxembourg
     </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
